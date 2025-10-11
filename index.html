@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherCast - Your Weather Companion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fas fa-cloud-sun"></i>
+        <h1>WeatherCast</h1>
+      </div>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </header>
+
+    <main>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for a city..."
+        />
+        <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+      </div>
+
+      <div class="error-message" id="errorMessage"></div>
+      <div class="loading" id="loading">Loading weather data...</div>
+
+      <section class="current-weather">
+        <h2 class="location" id="location">Lahore, Pakistan</h2>
+        <p class="date" id="currentDate"></p>
+        <div class="weather-icon">
+          <i class="fas fa-cloud" id="weatherIcon"></i>
+        </div>
+        <div class="temperature" id="temperature">--°C</div>
+        <div class="description" id="description">--</div>
+
+        <div class="weather-details">
+          <div class="detail-item">
+            <i class="fas fa-wind"></i>
+            <span>Wind Speed</span>
+            <span id="windSpeed">-- km/h</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-compass"></i>
+            <span>Wind Direction</span>
+            <span id="windDirection">--°</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-sun"></i>
+            <span>Day/Night</span>
+            <span id="isDay">--</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-mountain"></i>
+            <span>Elevation</span>
+            <span id="elevation">-- m</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="forecast" id="forecastSection">
+        <h2 style="grid-column: 1 / -1; margin-bottom: 1rem">5-Day Forecast</h2>
+        <!-- Forecast cards will be dynamically generated -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/abdul-hameed-website-developer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/abdulhameed-developer"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 WeatherCast. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
